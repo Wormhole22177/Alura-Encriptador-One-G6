@@ -1,6 +1,6 @@
 const input = document.getElementById("encript-input");
-const resEncript = document.getElementById("getEncript");
-
+let resEncript = document.getElementById("getEncript");
+let DresEncript = document.getElementById("getEncript");
 function validarCaracter(input) {
     const caracteresPermitidos = /[a-z ]/;
     const ultimoCaracter = input.value.charAt(input.value.length - 1);
@@ -49,7 +49,7 @@ function desencriptt(mensajeDes) {
    return messageDesEncriptCheck;
 }
 
-// Ejemplo de uso (asumiendo que tienes un botón que desencadena la encriptación)
+
 const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
 encriptarBtn.addEventListener("click", () => {
     const textToEncript = input.value;
@@ -59,9 +59,9 @@ encriptarBtn.addEventListener("click", () => {
 
 const desencriptarBtn = document.getElementById("descriptar-btn");
 desencriptarBtn.addEventListener("click", () => {
-    const textToDesEncript = input.value;
-    const desencriptRes = desencriptt(textToDesEncript);
-    desencriptRes.value = resEncript;
+    const textToEncriptd = input.value;
+    const encriptRes = desencriptt(textToEncriptd);
+    DresEncript.value = encriptRes;
 })
 
 
