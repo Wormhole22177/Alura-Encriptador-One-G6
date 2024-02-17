@@ -83,7 +83,7 @@ button {
 }
 
 .button-primary {
-    background: oklch(0.43 0.218 255);
+    background: oklch(0.156 0.367 256);
     color: oklch(1 0.011 268);
     border: none;
     transition: color 0.5s ease-in-out;
@@ -93,7 +93,7 @@ button {
     filter: brightness(170%);
 }
 .button-secondary {
-    border: 1px solid oklch(0.43 0.218 255);
+    border: 1px solid oklch(0.156 0.367 256);
     color: oklch(0 0.218 255);
     background-color: transparent;
     transition: color 0.5s ease-in-out;
@@ -104,7 +104,7 @@ button {
 }
 .button-copy {
     background-color:oklch(0.962 0.011 268);
-     border: 1px solid oklch(0.43 0.218 255);
+     border: 1px solid oklch(0.156 0.367 256);
      width: 626px;
      margin-top: 100;
      box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
@@ -135,7 +135,7 @@ button {
     border: none;
     background-color: transparent;
     cursor: auto;
-    color: oklch(0.43 0.218 255);
+    color: oklch(0.156 0.367 256);
     transition: color 0.5s ease-in-out;
 }
 .main-content input::placeholder {
@@ -144,7 +144,7 @@ button {
     font-size: 32px;
     line-height: 48px;
     transition: color 0.5s ease-in-out;
-    color: oklch(0.43 0.218 255);
+    color: oklch(0.156 0.367 256);
 }
 .seccion-1 {
     text-align: left;

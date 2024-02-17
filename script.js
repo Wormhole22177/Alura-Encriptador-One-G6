@@ -31,16 +31,37 @@ function encriptt(mensaje) {
     return messageEncriptCheck;
 }
 
+function analizarTexto(texto) {
+    const conversion = {
+        enter: "e",
+        imes: "i",
+        ai: "a",
+        ober: "o",
+        ufat: "u",
+        " ": " ",
+    };
+
+    const patron = /enter|imes|ai|ober|ufat| /g;
+    const resultado = texto.replace(patron, (match) => conversion[match]);
+
+    return resultado;
+}
+
+const dEncriptarBtn =document.getElementById("descriptar-btn");
+dEncriptarBtn.addEventListener("click", () => {
+    const textoAnalizadoInverso = input.value;
+    const textoAnalizadoCheck = analizarTexto(textoAnalizadoInverso);
+    resEncript.value = textoAnalizadoCheck;
+});
 
 const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
-encriptarBtn.addEventListener("click", (encriptar) => {
+encriptarBtn.addEventListener("click", () => {
     const textToEncript = input.value;
     const encriptRes = encriptt(textToEncript);
     resEncript.value = encriptRes;
 });
 
 
-/*
 console.log(" |\\---/|\n" +
     " | o_o |\n" +
     "  \\_^_/\n" +
@@ -51,4 +72,4 @@ console.log(" |\\---/|\n" +
     "                   _          \n" +
     " /|,/._     _  /    /_   _ __ \n" +
     "/  ///_//_//_'/  (_//_|_\\_\\/_/\n" +
-    "     _/                       \ns");*/
+    "     _/                       \n2");
