@@ -56,24 +56,14 @@ encriptarBtn.addEventListener("click", () => {
     const encriptRes = encriptt(textToEncript);
     resEncript.value = encriptRes;
 });
-/*const encriptarBtn = document.getElementById("encriptar-btn");
-encriptarBtn.addEventListener("click", () => {
-    const mensajeEncriptado = encriptt(input.value);
-    showRes(mensajeEncriptado);
-});*/
-/*const desencriptarBtn = document.getElementById("descriptar-btn");
+
+const desencriptarBtn = document.getElementById("descriptar-btn");
 desencriptarBtn.addEventListener("click", () => {
     const textToDesEncript = input.value;
     const desencriptRes = desencriptt(textToDesEncript);
     desencriptRes.value = resEncript;
-})*/
-/*
-const desencriptarBtn = document.getElementById("descriptar-btn");
-desencriptarBtn.addEventListener("click", () => {
-    const mensajeDesencriptado = desencriptt(input.value);
-    showRes(mensajeDesencriptado);
-});
-*/
+})
+
 
 
 
