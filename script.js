@@ -1,9 +1,6 @@
 const input = document.getElementById("encript-input");
 const resEncript = document.getElementById("getEncript");
 
-function showRes(resultado){
-    resEncript.value;resultado;
-}
 function validarCaracter(input) {
     const caracteresPermitidos = /[a-z ]/;
     const ultimoCaracter = input.value.charAt(input.value.length - 1);
@@ -53,28 +50,30 @@ function desencriptt(mensajeDes) {
 }
 
 // Ejemplo de uso (asumiendo que tienes un botón que desencadena la encriptación)
-/*const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
+const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
 encriptarBtn.addEventListener("click", () => {
     const textToEncript = input.value;
     const encriptRes = encriptt(textToEncript);
     resEncript.value = encriptRes;
-});*/
-const encriptarBtn = document.getElementById("encriptar-btn");
+});
+/*const encriptarBtn = document.getElementById("encriptar-btn");
 encriptarBtn.addEventListener("click", () => {
     const mensajeEncriptado = encriptt(input.value);
     showRes(mensajeEncriptado);
-});
+});*/
 /*const desencriptarBtn = document.getElementById("descriptar-btn");
 desencriptarBtn.addEventListener("click", () => {
     const textToDesEncript = input.value;
     const desencriptRes = desencriptt(textToDesEncript);
     desencriptRes.value = resEncript;
 })*/
+/*
 const desencriptarBtn = document.getElementById("descriptar-btn");
 desencriptarBtn.addEventListener("click", () => {
     const mensajeDesencriptado = desencriptt(input.value);
     showRes(mensajeDesencriptado);
 });
+*/
 
 
 
