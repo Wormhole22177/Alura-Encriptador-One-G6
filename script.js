@@ -1,6 +1,6 @@
 const input = document.getElementById("encript-input");
-let resEncript = document.getElementById("getEncript");
-let DresEncript = document.getElementById("getEncript");
+const resEncript = document.getElementById("getEncript");
+
 function validarCaracter(input) {
     const caracteresPermitidos = /[a-z ]/;
     const ultimoCaracter = input.value.charAt(input.value.length - 1);
@@ -31,43 +31,16 @@ function encriptt(mensaje) {
     return messageEncriptCheck;
 }
 
-function desencriptt(mensajeDes) {
-    const conversionDes = {
-        enter: "e",
-        imes: "i",
-        ai: "a",
-        ober: "o",
-        ufat: "u",
-        " ": " ",
-    };
-   let messageDesEncriptCheck = "";
-   for (let i = 0; i < mensajeDes.length; i++) {
-       const desLetter = mensajeDes[i];
-       const desLetterEn = conversionDes[desLetter] || desLetter;
-       messageDesEncriptCheck += desLetterEn;
-   }
-   return messageDesEncriptCheck;
-}
-
 
 const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
-encriptarBtn.addEventListener("click", () => {
+encriptarBtn.addEventListener("click", (encriptar) => {
     const textToEncript = input.value;
     const encriptRes = encriptt(textToEncript);
     resEncript.value = encriptRes;
 });
 
-const desencriptarBtn = document.getElementById("descriptar-btn");
-desencriptarBtn.addEventListener("click", () => {
-    const textToEncriptd = input.value;
-    const encriptRes = desencriptt(textToEncriptd);
-    DresEncript.value = encriptRes;
-})
 
-
-
-
-
+/*
 console.log(" |\\---/|\n" +
     " | o_o |\n" +
     "  \\_^_/\n" +
@@ -78,4 +51,4 @@ console.log(" |\\---/|\n" +
     "                   _          \n" +
     " /|,/._     _  /    /_   _ __ \n" +
     "/  ///_//_//_'/  (_//_|_\\_\\/_/\n" +
-    "     _/                       \ns")
+    "     _/                       \ns");*/
