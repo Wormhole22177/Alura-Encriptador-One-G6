@@ -1,0 +1,92 @@
+const input = document.getElementById("encript-input");
+const resEncript = document.getElementById("getEncript");
+
+function showRes(resultado){
+    resEncript.value;resultado;
+}
+function validarCaracter(input) {
+    const caracteresPermitidos = /[a-z ]/;
+    const ultimoCaracter = input.value.charAt(input.value.length - 1);
+    const caracterValido = caracteresPermitidos.test(ultimoCaracter);
+
+    if (!caracterValido) {
+        input.value = input.value.slice(0, -1);
+    } else {
+        input.value = input.value.toLowerCase();
+    }
+}
+
+function encriptt(mensaje) {
+    const conversion = {
+        e: "enter",
+        i: "imes",
+        a: "ai",
+        o: "ober",
+        u: "ufat",
+        " ": " ",
+    };
+    let messageEncriptCheck = "";
+    for (let i = 0; i < mensaje.length; i++) {
+        const letter = mensaje[i];
+        const letterEn = conversion[letter] || letter;
+        messageEncriptCheck += letterEn;
+    }
+    return messageEncriptCheck;
+}
+
+function desencriptt(mensajeDes) {
+    const conversionDes = {
+        enter: "e",
+        imes: "i",
+        ai: "a",
+        ober: "o",
+        ufat: "u",
+        " ": " ",
+    };
+   let messageDesEncriptCheck = "";
+   for (let i = 0; i < mensajeDes.length; i++) {
+       const desLetter = mensajeDes[i];
+       const desLetterEn = conversionDes[desLetter] || desLetter;
+       messageDesEncriptCheck += desLetterEn;
+   }
+   return messageDesEncriptCheck;
+}
+
+// Ejemplo de uso (asumiendo que tienes un botón que desencadena la encriptación)
+/*const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
+encriptarBtn.addEventListener("click", () => {
+    const textToEncript = input.value;
+    const encriptRes = encriptt(textToEncript);
+    resEncript.value = encriptRes;
+});*/
+const encriptarBtn = document.getElementById("encriptar-btn");
+encriptarBtn.addEventListener("click", () => {
+    const mensajeEncriptado = encriptt(input.value);
+    showRes(mensajeEncriptado);
+});
+/*const desencriptarBtn = document.getElementById("descriptar-btn");
+desencriptarBtn.addEventListener("click", () => {
+    const textToDesEncript = input.value;
+    const desencriptRes = desencriptt(textToDesEncript);
+    desencriptRes.value = resEncript;
+})*/
+const desencriptarBtn = document.getElementById("descriptar-btn");
+desencriptarBtn.addEventListener("click", () => {
+    const mensajeDesencriptado = desencriptt(input.value);
+    showRes(mensajeDesencriptado);
+});
+
+
+
+
+console.log(" |\\---/|\n" +
+    " | o_o |\n" +
+    "  \\_^_/\n" +
+    " / 'o' \\\n" +
+    "/       \\___     \n" +
+    "\\_(_|_)___  \\\n" +
+    "         (__/ \n" +
+    "                   _          \n" +
+    " /|,/._     _  /    /_   _ __ \n" +
+    "/  ///_//_//_'/  (_//_|_\\_\\/_/\n" +
+    "     _/                       \ns")
