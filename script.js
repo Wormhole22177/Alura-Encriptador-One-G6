@@ -1,5 +1,9 @@
+
+
 const input = document.getElementById("encript-input");
 const resEncript = document.getElementById("getEncript");
+const resDesEncript =document.getElementById("getEncript");
+
 
 function validarCaracter(input) {
     const caracteresPermitidos = /[a-z ]/;
@@ -51,7 +55,7 @@ const dEncriptarBtn =document.getElementById("descriptar-btn");
 dEncriptarBtn.addEventListener("click", () => {
     const textoAnalizadoInverso = input.value;
     const textoAnalizadoCheck = analizarTexto(textoAnalizadoInverso);
-    resEncript.value = textoAnalizadoCheck;
+    resDesEncript.value = textoAnalizadoCheck;
 });
 
 const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
