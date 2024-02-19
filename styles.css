@@ -113,10 +113,8 @@ button {
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;   
 }
  .main-content {
-    width: 500;
-    height: 300;
     margin: auto;
-    margin-top: 115px;
+    margin-top: 20vh;
     margin-left: 33px;
 }
 .main-content input {
