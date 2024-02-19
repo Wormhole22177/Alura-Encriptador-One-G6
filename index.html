@@ -21,6 +21,7 @@
 
     <section class="main-content">
         <div>
+            <form id="resetInput">
             <input
                     onkeyup="validarCaracter(this)"
                     placeholder="Ingrese texto aqui"
@@ -28,6 +29,7 @@
                     id="encript-input"
                     name="texto"
             />
+            </form>
         </div>
     </section>
     <section class="seccion-1">
@@ -38,11 +40,11 @@
         <p>Solo letras minúsculas y sin acentos</p>
     </section>
     <div class="buttons-container">
-        <button  id="encriptar-btn" class="button-primary" onclick="encriptar()">Encriptar</button>
-        <button  id="descriptar-btn" class="button-secondary" onclick="desencriptar()">Desencriptar</button>
+        <button  id="encriptar-btn" class="button-primary" >Encriptar</button>
+        <button  id="descriptar-btn" class="button-secondary" >Desencriptar</button>
     </div>
     <div class="container-translate">
-        <textarea onkeyup="this.value=this.value.toLowerCase()" placeholder="Ningun mensaje fue encontrado" name="area" id="getEncript" cols="29" rows="5"></textarea>
+        <textarea class="editor" placeholder="Ningun mensaje fue encontrado" name="area" id="getEncript" cols="29" rows="5"></textarea>
         <button id="clipboard" class="button-copy">Copiar</button>
     </div>
 </div>

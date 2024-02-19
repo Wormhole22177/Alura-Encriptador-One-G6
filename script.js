@@ -1,9 +1,8 @@
 
-
 const input = document.getElementById("encript-input");
-const resEncript = document.getElementById("getEncript");
-const resDesEncript =document.getElementById("getEncript");
-
+let resEncript = document.getElementById("getEncript");
+let resDesEncript =document.getElementById("getEncript");
+const resetInput =document.getElementById("resetInput");
 
 function validarCaracter(input) {
     const caracteresPermitidos = /[a-z ]/;
@@ -47,7 +46,6 @@ function analizarTexto(texto) {
 
     const patron = /enter|imes|ai|ober|ufat| /g;
     const resultado = texto.replace(patron, (match) => conversion[match]);
-
     return resultado;
 }
 
@@ -56,6 +54,7 @@ dEncriptarBtn.addEventListener("click", () => {
     const textoAnalizadoInverso = input.value;
     const textoAnalizadoCheck = analizarTexto(textoAnalizadoInverso);
     resDesEncript.value = textoAnalizadoCheck;
+    resetInput.reset();
 });
 
 const encriptarBtn = document.getElementById("encriptar-btn"); // Obtener el botón
@@ -63,8 +62,16 @@ encriptarBtn.addEventListener("click", () => {
     const textToEncript = input.value;
     const encriptRes = encriptt(textToEncript);
     resEncript.value = encriptRes;
+    resetInput.reset();
 });
 
+const copyBtn = document.getElementById("clipboard");
+copyBtn.addEventListener("click", () => {
+    let textoGenerado = resEncript;
+    navigator.clipboard.writeText(textoGenerado.value).then(() => {
+        console.log("texto copiado 🫶🏻");
+    });
+});
 
 console.log(" |\\---/|\n" +
     " | o_o |\n" +
@@ -76,4 +83,4 @@ console.log(" |\\---/|\n" +
     "                   _          \n" +
     " /|,/._     _  /    /_   _ __ \n" +
     "/  ///_//_//_'/  (_//_|_\\_\\/_/\n" +
-    "     _/                       \n2");
+    "     _/                       \n");
