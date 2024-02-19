@@ -144,7 +144,7 @@ button {
     font-size: 32px;
     line-height: 48px;
     transition: color 0.5s ease-in-out;
-    color: oklch(0.156 0.367 256);
+    color:oklch(0.156 0.367 256);
 }
 .seccion-1 {
     text-align: left;

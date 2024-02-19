@@ -67,8 +67,7 @@ encriptarBtn.addEventListener("click", () => {
 
 const copyBtn = document.getElementById("clipboard");
 copyBtn.addEventListener("click", () => {
-    let textoGenerado = resEncript;
-    navigator.clipboard.writeText(textoGenerado.value).then(() => {
+    navigator.clipboard.writeText(resEncript.value).then(() => {
         console.log("texto copiado 🫶🏻");
     });
 });
