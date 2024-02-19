@@ -1,17 +1,16 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: oklch(0.936 0.011 268);
-    margin: 5vh;
-    padding: 0;
     overflow: hidden;
     display: flex;
-    justify-content: center;
     height: 100vh;
-    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: content-box;
     transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container {
-    padding-right: 33px;
+    margin: auto;
 }
 .buttons-container {
     flex-direction: row;
@@ -20,6 +19,9 @@ body {
     width: 680px;
     height: 67px;
     margin-left: 45px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 5px;
 }
 .container-translate {
     position: relative;
@@ -159,6 +161,7 @@ button {
 }
 .logo-c {
 position: relative;
+margin-top: 30px;
 }
 .alura {
     position: relative;
