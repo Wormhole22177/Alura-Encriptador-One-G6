@@ -30,7 +30,7 @@ function encriptt(mensaje) {
         const letter = mensaje[i];
         const letterEn = conversion[letter] || letter;
         messageEncriptCheck += letterEn;
-    }
+    } 
     return messageEncriptCheck;
 }
 
